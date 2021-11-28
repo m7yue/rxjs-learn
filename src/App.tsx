@@ -22,6 +22,14 @@ import {timerOperators} from './Operators/perators-list/creation-operators/timer
 import {iifOperators} from './Operators/perators-list/creation-operators/iif'
 
 
+import {combineLatestOperator} from './Operators/perators-list/join-creation-operators/combineLatest'
+import {concatOperator} from './Operators/perators-list/join-creation-operators/concat'
+import {forkJoinOperator} from './Operators/perators-list/join-creation-operators/forkJoin'
+import {mergeOperator} from './Operators/perators-list/join-creation-operators/merge'
+import {partitionOperator} from './Operators/perators-list/join-creation-operators/partition'
+import {raceOperator} from './Operators/perators-list/join-creation-operators/race'
+import {zipOperator} from './Operators/perators-list/join-creation-operators/zip'
+
 import { test } from './Operators/creating-newoperators-from-scratch'
 
 function App() {
@@ -40,7 +48,15 @@ function App() {
   // rangeOperators()
   // throwErrorOperators()
   // timerOperators()
-  iifOperators()
+  // iifOperators()
+
+  // combineLatestOperator()
+  // concatOperator()
+  // forkJoinOperator()
+  // mergeOperator()
+  // partitionOperator()
+  // raceOperator()
+  zipOperator()
 
   return (
     <div className="App">
