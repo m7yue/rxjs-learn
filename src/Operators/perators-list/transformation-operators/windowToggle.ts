@@ -1,11 +1,22 @@
 import { fromEvent, interval, EMPTY } from 'rxjs';
-import { windowToggle, mergeAll } from 'rxjs/operators';
+import { windowToggle, mergeAll, map, buffer } from 'rxjs/operators';
 
 export const windowToggleOperator = () => {
-  const clicks = fromEvent(document, 'click');
+  const observable = interval(500);
   const openings = interval(1000);
-  const result = clicks.pipe(
-    windowToggle(openings, i => i % 2 ? interval(500) : EMPTY),
+
+  const result = observable.pipe(
+    windowToggle(
+      openings,
+      i =>{
+        return i % 2 ? interval(500) : EMPTY
+      }
+    ),
+    map(
+      win => win.pipe(
+        buffer(EMPTY)
+      )
+    ),
     mergeAll()
   );
   result.subscribe(x => console.log(x));

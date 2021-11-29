@@ -82,10 +82,10 @@ function App() {
   // switchMapOperator()
   // switchMapToOperator()
   // windowOperator()
-  windowCountOperator()
+  // windowCountOperator()
   // windowTimeOperator()
   // windowToggleOperator()
-  // windowWhenOperator()
+  windowWhenOperator()
 
   // ajaxOperators()
   // bindCallbackOperator()

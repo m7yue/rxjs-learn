@@ -1,12 +1,17 @@
-import { fromEvent, interval } from 'rxjs';
-import { windowWhen, map, mergeAll, take } from 'rxjs/operators';
+import { fromEvent, interval,EMPTY } from 'rxjs';
+import { windowWhen, map, mergeAll, take, buffer, bufferWhen } from 'rxjs/operators';
 
 export const windowWhenOperator = () => {
   const clicks = fromEvent(document, 'click');
-  const result = clicks.pipe(
-    windowWhen(() => interval(1000 + Math.random() * 4000)),
-    map(win => win.pipe(take(2))),     // each window has at most 2 emissions
-    mergeAll()                         // flatten the Observable-of-Observables
+  const arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
+
+  const data = interval(1000).pipe(take(arr.length), map(i => arr[i]))
+  const result = data.pipe(
+    windowWhen(() => clicks),
+    map(win => win.pipe(
+      buffer(EMPTY)
+    )),
+    mergeAll(),
   );
   result.subscribe(x => console.log(x));
 }
