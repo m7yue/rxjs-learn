@@ -83,18 +83,34 @@ import {takeWhileOperator} from './Operators/perators-list/filtering-operators/t
 import {throttleOperator} from './Operators/perators-list/filtering-operators/throttle'
 import {throttleTimeOperator} from './Operators/perators-list/filtering-operators/throttleTime'
 
+
 import {combineLatestAllOperator} from './Operators/perators-list/join-operators/combineLatestAll'
-// import {concatAllOperator} from './Operators/perators-list/join-operators/concatAll'
+import {concatAllOperator} from './Operators/perators-list/join-operators/concatAll'
 import {exhaustAllOperator} from './Operators/perators-list/join-operators/exhaustAll'
 import {mergeAllOperator} from './Operators/perators-list/join-operators/mergeAll'
 import {switchAllOperator} from './Operators/perators-list/join-operators/switchAll'
 import {startWithOperator} from './Operators/perators-list/join-operators/startWith'
 import {withLatestFromOperator} from './Operators/perators-list/join-operators/withLatestFrom'
 
+import {shareOperator} from './Operators/perators-list/multicasting-operators/share'
+
+
+import {catchErrorOperator} from './Operators/perators-list/error-handling-operators/catchError'
+import {retryOperator} from './Operators/perators-list/error-handling-operators/retry'
+import {retryWhenOperator} from './Operators/perators-list/error-handling-operators/retryWhen'
+
 import { test } from './Operators/creating-newoperators-from-scratch'
 
 function App() {
   // test()
+  
+  // catchErrorOperator()
+  // retryOperator()
+  retryWhenOperator()
+  
+
+  // shareOperator()
+
 
   // combineLatestAllOperator()
   // concatAllOperator()
@@ -102,7 +118,7 @@ function App() {
   // mergeAllOperator()
   // switchAllOperator()
   // startWithOperator()
-  withLatestFromOperator()
+  // withLatestFromOperator()
 
   // auditOperator()
   // auditTimeOperator()
