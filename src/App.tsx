@@ -56,10 +56,63 @@ import {windowTimeOperator} from './Operators/perators-list/transformation-opera
 import {windowToggleOperator} from './Operators/perators-list/transformation-operators/windowToggle'
 import {windowWhenOperator} from './Operators/perators-list/transformation-operators/windowWhen'
 
+
+import {auditOperator} from './Operators/perators-list/filtering-operators/audit'
+import {auditTimeOperator} from './Operators/perators-list/filtering-operators/auditTime'
+import {debounceOperator} from './Operators/perators-list/filtering-operators/debounce'
+import {debounceTimeOperator} from './Operators/perators-list/filtering-operators/debounceTime'
+import {distinctOperator} from './Operators/perators-list/filtering-operators/distinct'
+import {distinctUntilChangedOperator} from './Operators/perators-list/filtering-operators/distinctUntilChanged'
+import {distinctUntilKeyChangedOperator} from './Operators/perators-list/filtering-operators/distinctUntilKeyChanged'
+import {elementAtOperator} from './Operators/perators-list/filtering-operators/elementAt'
+import {filterOperator} from './Operators/perators-list/filtering-operators/filter'
+import {firstOperator} from './Operators/perators-list/filtering-operators/first'
+import {ignoreElementsOperator} from './Operators/perators-list/filtering-operators/ignoreElements'
+import {lastOperator} from './Operators/perators-list/filtering-operators/last'
+import {sampleOperator} from './Operators/perators-list/filtering-operators/sample'
+import {sampleTimeOperator} from './Operators/perators-list/filtering-operators/sampleTime'
+import {singleOperator} from './Operators/perators-list/filtering-operators/single'
+import {skipOperator} from './Operators/perators-list/filtering-operators/skip'
+import {skipLastOperator} from './Operators/perators-list/filtering-operators/skipLast'
+import {skipUntilOperator} from './Operators/perators-list/filtering-operators/skipUntil'
+import {skipWhileOperator} from './Operators/perators-list/filtering-operators/skipWhile'
+import {takeOperator} from './Operators/perators-list/filtering-operators/take'
+import {takeLastOperator} from './Operators/perators-list/filtering-operators/takeLast'
+import {takeUtilOperator} from './Operators/perators-list/filtering-operators/takeUntil'
+import {takeWhileOperator} from './Operators/perators-list/filtering-operators/takeWhile'
+import {throttleOperator} from './Operators/perators-list/filtering-operators/throttle'
+import {throttleTimeOperator} from './Operators/perators-list/filtering-operators/throttleTime'
+
 import { test } from './Operators/creating-newoperators-from-scratch'
 
 function App() {
   // test()
+
+  // auditOperator()
+  // auditTimeOperator()
+  // debounceOperator()
+  // debounceTimeOperator()
+  // distinctOperator()
+  // distinctUntilChangedOperator()
+  // distinctUntilKeyChangedOperator()
+  // elementAtOperator()
+  // filterOperator()
+  // firstOperator()
+  // ignoreElementsOperator()
+  // lastOperator()
+  // sampleOperator()
+  // sampleTimeOperator()
+  // singleOperator()
+  // skipOperator()
+  // skipLastOperator()
+  // skipUntilOperator()
+  // skipWhileOperator()
+  // takeOperator()
+  // takeLastOperator()
+  // takeUtilOperator()
+  takeWhileOperator()
+  // throttleOperator()
+  // throttleTimeOperator()
 
 
   // bufferOperator()
@@ -85,7 +138,7 @@ function App() {
   // windowCountOperator()
   // windowTimeOperator()
   // windowToggleOperator()
-  windowWhenOperator()
+  // windowWhenOperator()
 
   // ajaxOperators()
   // bindCallbackOperator()
