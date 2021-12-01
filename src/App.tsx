@@ -99,14 +99,44 @@ import {catchErrorOperator} from './Operators/perators-list/error-handling-opera
 import {retryOperator} from './Operators/perators-list/error-handling-operators/retry'
 import {retryWhenOperator} from './Operators/perators-list/error-handling-operators/retryWhen'
 
+
+import {tapOperator} from './Operators/perators-list/utility-operators/tap'
+import {delayOperator} from './Operators/perators-list/utility-operators/delay'
+import {delayWhenOperator} from './Operators/perators-list/utility-operators/delayWhen'
+import {dematerializeOperator} from './Operators/perators-list/utility-operators/dematerialize'
+import {materializeOperator} from './Operators/perators-list/utility-operators/materialize'
+import {observeOnOperator} from './Operators/perators-list/utility-operators/observeOn'
+import {subscribeOnOperator} from './Operators/perators-list/utility-operators/subscribeOn'
+import {timeIntervalOperator} from './Operators/perators-list/utility-operators/timeInterval'
+import {timestampOperator} from './Operators/perators-list/utility-operators/timestamp'
+import {timeoutOperator} from './Operators/perators-list/utility-operators/timeout'
+import {toArrayOperator} from './Operators/perators-list/utility-operators/toArray'
+
+
+
+
+
 import { test } from './Operators/creating-newoperators-from-scratch'
 
 function App() {
   // test()
-  
+
+  // tapOperator()
+  // delayOperator()
+  // delayWhenOperator()
+  // dematerializeOperator()
+  materializeOperator()
+  // observeOnOperator()
+  // subscribeOnOperator()
+  // timeIntervalOperator()
+  // timestampOperator()
+  // timeoutOperator()
+  // toArrayOperator()
+
+
   // catchErrorOperator()
   // retryOperator()
-  retryWhenOperator()
+  // retryWhenOperator()
   
 
   // shareOperator()
