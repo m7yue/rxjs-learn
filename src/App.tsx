@@ -113,6 +113,19 @@ import {timeoutOperator} from './Operators/perators-list/utility-operators/timeo
 import {toArrayOperator} from './Operators/perators-list/utility-operators/toArray'
 
 
+import {defaultIfEmptyOperator} from './Operators/perators-list/conditional-boolean-operators/defaultIfEmpty'
+import {everyOperator} from './Operators/perators-list/conditional-boolean-operators/every'
+import {findOperator} from './Operators/perators-list/conditional-boolean-operators/find'
+import {findIndexOperator} from './Operators/perators-list/conditional-boolean-operators/findIndex'
+import {isEmptyOperator} from './Operators/perators-list/conditional-boolean-operators/isEmpty'
+
+
+import {countOperator} from './Operators/perators-list/mathematical-aggregate-operators/count'
+import {maxOperator} from './Operators/perators-list/mathematical-aggregate-operators/max'
+import {minOperator} from './Operators/perators-list/mathematical-aggregate-operators/min'
+import {reduceOperator} from './Operators/perators-list/mathematical-aggregate-operators/reduce'
+
+
 
 
 
@@ -121,11 +134,22 @@ import { test } from './Operators/creating-newoperators-from-scratch'
 function App() {
   // test()
 
+  // countOperator()
+  // maxOperator()
+  // minOperator()
+  reduceOperator()
+
+  // defaultIfEmptyOperator()
+  // everyOperator()
+  // findOperator()
+  // findIndexOperator()
+  // isEmptyOperator()
+
   // tapOperator()
   // delayOperator()
   // delayWhenOperator()
   // dematerializeOperator()
-  materializeOperator()
+  // materializeOperator()
   // observeOnOperator()
   // subscribeOnOperator()
   // timeIntervalOperator()
