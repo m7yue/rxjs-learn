@@ -1,5 +1,6 @@
 import { Observable } from 'rxjs';
 
+
 export const test1 = () => {
   const observable = new Observable(subscriber => {
     try {
@@ -20,6 +21,10 @@ export const test1 = () => {
      console.log('unsubscribe_aaa')
     };
   });
+
+
+  // forEach
+  observable.forEach(value => console.log('forEach value:' + value))
   
   console.log('just before subscribe');
   const subscription = observable.subscribe({
@@ -37,3 +42,20 @@ export const test1 = () => {
   // });
   console.log('just after subscribe');
 }
+
+/**
+  function pipe(...operations) {
+    return pipeFromArray(operations)(this);
+  }
+
+  export function pipeFromArray(fns) {
+    return function piped(input) {
+      return fns.reduce((prev: any, fn) => fn(prev), input);
+    };
+  }
+ */
+
+
+
+  // Observable.subscribe(fn | Observer) ===> subscriber: {next, complete, error, unsubscribe}, destination ===>  this._subscribe(subscriber)
+  // Subscriber.next(value) ===> this._next(value) ===>  this.destination.next(value) ===> Observable.subscribe(Observer): next, err, complete call...

@@ -1,10 +1,6 @@
 import React from 'react';
 
-// import {test1} from './Observable'
-
-// import { test } from './Operators'
-
-// import {test1} from './Observable'
+import { customDelayOperator } from './Operators/creating-custom-operators/creating-newoperators-from-scratch'
 
 import {ajaxOperators} from './Operators/perators-list/creation-operators/ajax'
 import {bindCallbackOperator} from './Operators/perators-list/creation-operators/bindCallback'
@@ -125,19 +121,30 @@ import {maxOperator} from './Operators/perators-list/mathematical-aggregate-oper
 import {minOperator} from './Operators/perators-list/mathematical-aggregate-operators/min'
 import {reduceOperator} from './Operators/perators-list/mathematical-aggregate-operators/reduce'
 
-
+import {subscriptionDemo} from './Subscription/index'
+import {subjectDemo} from './Subject'
+import {behaviorSubjectDemo} from './Subject/behaviorSubject'
+import {replaySubjectDemo} from './Subject/replaySubject'
+import {asyncSubjectDemo} from './Subject/asyncSubject'
 
 
 
 import { test } from './Operators/creating-newoperators-from-scratch'
 
 function App() {
-  // test()
+  // subjectDemo()
+  // behaviorSubjectDemo()
+  replaySubjectDemo()
+  // asyncSubjectDemo()
+
+  // subscriptionDemo()
+
+  // customDelayOperator()
 
   // countOperator()
   // maxOperator()
   // minOperator()
-  reduceOperator()
+  // reduceOperator()
 
   // defaultIfEmptyOperator()
   // everyOperator()
