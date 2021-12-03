@@ -127,14 +127,22 @@ import {behaviorSubjectDemo} from './Subject/behaviorSubject'
 import {replaySubjectDemo} from './Subject/replaySubject'
 import {asyncSubjectDemo} from './Subject/asyncSubject'
 
+import {asyncSchedulerDemo} from './Scheduler/asyncScheduler'
+import {queueSchedulerDemo} from './Scheduler/queueScheduler'
+import {asapSchedulerDemo} from './Scheduler/asapScheduler'
+
 
 
 import { test } from './Operators/creating-newoperators-from-scratch'
 
 function App() {
+  asapSchedulerDemo()
+  // queueSchedulerDemo()
+  // asyncSchedulerDemo()
+
   // subjectDemo()
   // behaviorSubjectDemo()
-  replaySubjectDemo()
+  // replaySubjectDemo()
   // asyncSubjectDemo()
 
   // subscriptionDemo()
