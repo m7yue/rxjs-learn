@@ -29,4 +29,6 @@ export const fromOperators = () => {
   result.subscribe(x => console.log(x));
 
   console.log('end');
+
+  // innerFrom(input).pipe(subscribeOn(scheduler), observeOn(scheduler))
 }

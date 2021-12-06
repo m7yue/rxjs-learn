@@ -7,3 +7,5 @@ export const intervalOperators = () => {
   const takeFourNumbers = numbers.pipe(take(4));
   takeFourNumbers.subscribe(x => console.log('Next: ', x));
 }
+
+// (global as any).setInterval = null

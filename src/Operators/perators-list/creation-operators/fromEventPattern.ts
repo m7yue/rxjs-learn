@@ -1,12 +1,15 @@
 import { fromEventPattern } from 'rxjs';
 
+// 添加事件，接触事件
 export const fromEventPatternOperators = () => {
 
   function addClickHandler(handler: (this: Document, ev: MouseEvent) => any) {
     document.addEventListener('click', handler);
+    return 7
   }
   
-  function removeClickHandler(handler: (this: Document, ev: MouseEvent) => any) {
+  function removeClickHandler(handler: (this: Document, ev: MouseEvent) => any, signal?: any) {
+    console.log(signal)
     document.removeEventListener('click', handler);
   }
   
@@ -14,6 +17,9 @@ export const fromEventPatternOperators = () => {
     addClickHandler,
     removeClickHandler
   );
-  clicks.subscribe(x => console.log(x));
+  const sub =  clicks.subscribe(x => console.log(x));
 
+  setTimeout(() => {
+    sub.unsubscribe()
+  }, 100);
 }

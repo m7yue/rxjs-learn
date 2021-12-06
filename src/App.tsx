@@ -136,7 +136,7 @@ import {asapSchedulerDemo} from './Scheduler/asapScheduler'
 import { test } from './Operators/creating-newoperators-from-scratch'
 
 function App() {
-  asapSchedulerDemo()
+  // asapSchedulerDemo()
   // queueSchedulerDemo()
   // asyncSchedulerDemo()
 
@@ -241,6 +241,16 @@ function App() {
   // windowToggleOperator()
   // windowWhenOperator()
 
+
+  // combineLatestOperator()
+  // concatOperator()
+  // forkJoinOperator()
+  // mergeOperator()
+  // partitionOperator()
+  // raceOperator()
+  // zipOperator()
+
+
   // ajaxOperators()
   // bindCallbackOperator()
   // bindNodeCallbackOperator()
@@ -253,16 +263,8 @@ function App() {
   // ofOperators()
   // rangeOperators()
   // throwErrorOperators()
-  // timerOperators()
+  timerOperators()
   // iifOperators()
-
-  // combineLatestOperator()
-  // concatOperator()
-  // forkJoinOperator()
-  // mergeOperator()
-  // partitionOperator()
-  // raceOperator()
-  // zipOperator()
 
   return (
     <div className="App">
