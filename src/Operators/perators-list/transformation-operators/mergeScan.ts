@@ -2,7 +2,7 @@ import { fromEvent, of } from 'rxjs';
 import { mapTo, mergeScan } from 'rxjs/operators';
 
 // It's like scan, but the Observables returned by the accumulator are merged into the outer Observable.
-export const mergeMapScanOperator = () => {
+export const mergeScanOperator = () => {
   const click$ = fromEvent(document, 'click');
   const one$ = click$.pipe(mapTo(1));
   const seed = 0;

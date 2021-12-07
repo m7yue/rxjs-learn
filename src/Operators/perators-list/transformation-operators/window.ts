@@ -1,5 +1,5 @@
 import { fromEvent, interval, EMPTY } from 'rxjs';
-import { window, mergeAll, map, buffer } from 'rxjs/operators';
+import { window, mergeAll, map, buffer, count } from 'rxjs/operators';
 
 // It's like buffer, but emits a nested Observable instead of an array.
 export const windowOperator = () => {

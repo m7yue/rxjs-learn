@@ -3,10 +3,10 @@ import { switchMap, map, mergeMap } from 'rxjs/operators';
 
 // Maps each value to an Observable, then flattens all of these inner Observables.
 export const switchMapOperator = () => {
-  const switched = of(1, 2, 3)
-    .pipe(switchMap((x: number) => of(x, x ** 2, x ** 3)));
-    // .pipe(mergeMap((x: number) => of(x, x ** 2, x ** 3))); // 区别是什么呢
-  switched.subscribe(x => console.log(x));
+  // const switched = of(1, 2, 3)
+  //   .pipe(switchMap((x: number) => of(x, x ** 2, x ** 3)));
+  //   // .pipe(mergeMap((x: number) => of(x, x ** 2, x ** 3))); // 区别是什么呢, switchMap 会在下一个 observable 被送出后直接退订前一个未处理完的 observable
+  // switched.subscribe(x => console.log(x));
   
 
   const letters = of('a', 'b', 'c');

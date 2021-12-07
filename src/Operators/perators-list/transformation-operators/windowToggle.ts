@@ -1,4 +1,4 @@
-import { fromEvent, interval, EMPTY } from 'rxjs';
+import { fromEvent, interval, EMPTY, timer } from 'rxjs';
 import { windowToggle, mergeAll, map, buffer } from 'rxjs/operators';
 
 export const windowToggleOperator = () => {
@@ -9,7 +9,7 @@ export const windowToggleOperator = () => {
     windowToggle(
       openings,
       i =>{
-        return i % 2 ? interval(500) : EMPTY
+        return i % 2 ? timer(500) : EMPTY
       }
     ),
     map(

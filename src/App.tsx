@@ -41,7 +41,7 @@ import {mapOperator} from './Operators/perators-list/transformation-operators/ma
 import {mapToOperator} from './Operators/perators-list/transformation-operators/mapTo'
 import {mergeMapOperator} from './Operators/perators-list/transformation-operators/mergeMap'
 import {mergeMapToOperator} from './Operators/perators-list/transformation-operators/mergeMapTo'
-import {mergeMapScanOperator} from './Operators/perators-list/transformation-operators/mergeMapScan'
+import {mergeScanOperator} from './Operators/perators-list/transformation-operators/mergeScan'
 import {pairwiseOperator} from './Operators/perators-list/transformation-operators/pairwise'
 import {scanOperator} from './Operators/perators-list/transformation-operators/scan'
 import {switchMapOperator} from './Operators/perators-list/transformation-operators/switchMap'
@@ -230,7 +230,7 @@ function App() {
   // mapToOperator()
   // mergeMapOperator()
   // mergeMapToOperator()
-  // mergeMapScanOperator()
+  // mergeScanOperator()
   // pairwiseOperator()
   // scanOperator()
   // switchMapOperator()
@@ -238,7 +238,7 @@ function App() {
   // windowOperator()
   // windowCountOperator()
   // windowTimeOperator()
-  // windowToggleOperator()
+  windowToggleOperator()
   // windowWhenOperator()
 
 
@@ -263,7 +263,7 @@ function App() {
   // ofOperators()
   // rangeOperators()
   // throwErrorOperators()
-  timerOperators()
+  // timerOperators()
   // iifOperators()
 
   return (

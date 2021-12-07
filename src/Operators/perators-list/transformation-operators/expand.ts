@@ -7,8 +7,9 @@ export const expandOperator = () => {
   const clicks = fromEvent(document, 'click');
   const powersOfTwo = clicks.pipe(
     mapTo(1),
-    expand(x => of(2 * x).pipe(delay(1000))),
-    take(10),
+    expand(x => of(2 * x).pipe(
+      delay(1000),
+    ), 2),
   );
   powersOfTwo.subscribe(x => console.log(x));
 }

@@ -1,7 +1,7 @@
 import { fromEvent, of, EMPTY } from 'rxjs';
 import { windowCount, map, mergeAll, buffer } from 'rxjs/operators';
 
-// It's like bufferCount, but emits a nested Observable instead of an array.
+// It's like bufferCount, but emits a nested(嵌套的) Observable instead of an array.
 export const windowCountOperator = () => {
   const clicks = fromEvent(document, 'click');
   // const data = of('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i')
