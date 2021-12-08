@@ -3,10 +3,10 @@ import { bufferCount, buffer  } from 'rxjs/operators';
 
 export const bufferCountOperator = () => {
   const data = of('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i')
-  const buffered = data.pipe(bufferCount(3, 2));
+  const buffered = data.pipe(bufferCount(3, 2)); // bufferSize, startBufferEvery(每隔几个记录下一轮的值)
   buffered.subscribe(x => console.log(x));
   
-  // mock
+  // 内部实现原理
   let buffers: string[][] = [];
   let count = 0;
   data.subscribe({
@@ -28,6 +28,7 @@ export const bufferCountOperator = () => {
         for (const buffer of toEmit) {
           arrRemove(buffers, buffer);
           console.log(buffer)
+          // subscriber.next(buffer);
         }
       }
     }, 

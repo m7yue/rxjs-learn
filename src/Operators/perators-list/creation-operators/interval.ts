@@ -1,7 +1,7 @@
 import { interval } from 'rxjs';
 import { take } from 'rxjs/operators';
 
-export const intervalOperators = () => {
+export const intervalOperator = () => {
   const numbers = interval(1000);
 
   const takeFourNumbers = numbers.pipe(take(4));

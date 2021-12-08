@@ -1,7 +1,7 @@
 import { take } from 'rxjs/operators';
 import { from, asyncScheduler } from 'rxjs';
 
-export const fromOperators = () => {
+export const fromOperator = () => {
   // const array = [10, 20, 30];
   // const result = from(array);
   // result.subscribe(x => console.log(x));

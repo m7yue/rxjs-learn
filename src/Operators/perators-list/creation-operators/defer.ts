@@ -1,6 +1,6 @@
 import { defer, fromEvent, interval } from 'rxjs';
 
-export const deferOperators = () => {
+export const deferOperator = () => {
   const observableFactory = () => {
     console.log('call')
     return new Promise(re => {

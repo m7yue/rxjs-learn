@@ -2,20 +2,20 @@ import React from 'react';
 
 import { customDelayOperator } from './Operators/creating-custom-operators/creating-newoperators-from-scratch'
 
-import {ajaxOperators} from './Operators/perators-list/creation-operators/ajax'
+import {ajaxOperator} from './Operators/perators-list/creation-operators/ajax'
 import {bindCallbackOperator} from './Operators/perators-list/creation-operators/bindCallback'
 import {bindNodeCallbackOperator} from './Operators/perators-list/creation-operators/bindNodeCallback'
-import {deferOperators} from './Operators/perators-list/creation-operators/defer'
+import {deferOperator} from './Operators/perators-list/creation-operators/defer'
 import {emptyDemo} from './Operators/perators-list/creation-operators/empty'
-import {fromOperators} from './Operators/perators-list/creation-operators/from'
-import {fromEventOperators} from './Operators/perators-list/creation-operators/fromEvent'
-import {fromEventPatternOperators} from './Operators/perators-list/creation-operators/fromEventPattern'
-import {intervalOperators} from './Operators/perators-list/creation-operators/interval'
-import {ofOperators} from './Operators/perators-list/creation-operators/of'
-import {rangeOperators} from './Operators/perators-list/creation-operators/range'
-import {throwErrorOperators} from './Operators/perators-list/creation-operators/throwError'
-import {timerOperators} from './Operators/perators-list/creation-operators/timer'
-import {iifOperators} from './Operators/perators-list/creation-operators/iif'
+import {fromOperator} from './Operators/perators-list/creation-operators/from'
+import {fromEventOperator} from './Operators/perators-list/creation-operators/fromEvent'
+import {fromEventPatternOperator} from './Operators/perators-list/creation-operators/fromEventPattern'
+import {intervalOperator} from './Operators/perators-list/creation-operators/interval'
+import {ofOperator} from './Operators/perators-list/creation-operators/of'
+import {rangeOperator} from './Operators/perators-list/creation-operators/range'
+import {throwErrorOperator} from './Operators/perators-list/creation-operators/throwError'
+import {timerOperator} from './Operators/perators-list/creation-operators/timer'
+import {iifOperator} from './Operators/perators-list/creation-operators/iif'
 
 
 import {combineLatestOperator} from './Operators/perators-list/join-creation-operators/combineLatest'
@@ -219,7 +219,7 @@ function App() {
   // bufferOperator()
   // bufferCountOperator()
   // bufferTimeOperator()
-  // bufferToggleOperator()
+  bufferToggleOperator()
   // bufferWhenOperator()
   // concatMapOperator()
   // concatMapToOperator()
@@ -251,20 +251,20 @@ function App() {
   // zipOperator()
 
 
-  // ajaxOperators()
+  // ajaxOperator()
   // bindCallbackOperator()
   // bindNodeCallbackOperator()
-  // deferOperators()
+  // deferOperator()
   // emptyDemo()
-  // fromOperators()
-  // fromEventOperators()
-  // fromEventPatternOperators()
-  // intervalOperators()
-  // ofOperators()
-  // rangeOperators()
-  // throwErrorOperators()
-  // timerOperators()
-  // iifOperators()
+  // fromOperator()
+  // fromEventOperator()
+  // fromEventPatternOperator()
+  // intervalOperator()
+  // ofOperator()
+  // rangeOperator()
+  // throwErrorOperator()
+  // timerOperator()
+  // iifOperator()
 
   return (
     <div className="App">

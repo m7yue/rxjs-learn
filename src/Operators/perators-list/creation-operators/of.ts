@@ -1,7 +1,7 @@
 import { of, asyncScheduler } from 'rxjs';
 import { take } from 'rxjs/operators';
 
-export const ofOperators = () => {
+export const ofOperator = () => {
   console.log('start')
   of(10, 20, 30)
   // of(10, 20, 30, asyncScheduler) // 内部还是用 from 实现

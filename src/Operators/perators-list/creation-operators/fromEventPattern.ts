@@ -1,7 +1,7 @@
 import { fromEventPattern } from 'rxjs';
 
 // 添加事件，接触事件
-export const fromEventPatternOperators = () => {
+export const fromEventPatternOperator = () => {
 
   function addClickHandler(handler: (this: Document, ev: MouseEvent) => any) {
     document.addEventListener('click', handler);

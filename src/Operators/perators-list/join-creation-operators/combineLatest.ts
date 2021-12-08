@@ -26,7 +26,15 @@ export const combineLatestOperator = () => {
   // const combined = combineLatest(observables);
   // combined.subscribe(value => console.log(value));
 
-
+  
+  /**
+   * remainingFirstValues = 2 == >
+   * values[0] = 70, remainingFirstValues = 1, values[0] = 72 .... values[0] = 75 ===> 
+   * values[1] = 1.76, remainingFirstValues = 0 ===>
+   * subscriber.next ===>
+   * values[1] = 1.77, remainingFirstValues = 0 ===>
+   * ...
+   */
   const weight = of(70, 72, 76, 79, 75);
   const height = of(1.76, 1.77, 1.78);
   const bmi = combineLatest([weight, height])

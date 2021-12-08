@@ -1,6 +1,6 @@
 import { fromEvent } from 'rxjs';
 
-export const fromEventOperators = () => {
+export const fromEventOperator = () => {
   // const clicks = fromEvent(document, 'click');
   // clicks.subscribe(x => console.log(x));
 

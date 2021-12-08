@@ -1,6 +1,6 @@
 import { throwError } from 'rxjs';
 
-export const throwErrorOperators = () => {
+export const throwErrorOperator = () => {
   let errorCount = 0;
  
   const errorWithTimestamp$ = throwError(() => {

@@ -2,7 +2,7 @@ import { ajax } from 'rxjs/ajax';
 import { map, catchError } from 'rxjs/operators';
 import { of } from 'rxjs';
 
-export const ajaxOperators = () => {
+export const ajaxOperator = () => {
   const obsAjax = 
     ajax(`https://api.github.com/users?per_page=7`)
     .pipe(

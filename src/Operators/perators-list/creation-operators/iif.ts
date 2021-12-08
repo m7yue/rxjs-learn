@@ -1,6 +1,6 @@
 import { iif, of } from 'rxjs';
 
-export const iifOperators = () => {
+export const iifOperator = () => {
   let subscribeToFirst: boolean;
 
   const firstOrSecond = iif(

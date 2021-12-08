@@ -1,7 +1,7 @@
 import { timer, of, interval } from 'rxjs';
 import { concatMapTo, take, takeUntil } from 'rxjs/operators';
 
-export const timerOperators = () => {
+export const timerOperator = () => {
    const source = of(1, 2, 3);
 
    const takeFourNumbers = timer(2000, 1000).pipe(take(4)); // 2000 => 开始触发时间

@@ -1,6 +1,6 @@
 import { range  } from 'rxjs';
 
-export const rangeOperators = () => {
+export const rangeOperator = () => {
   const numbers = range(1, 3); // start, count
  
   numbers.subscribe({
