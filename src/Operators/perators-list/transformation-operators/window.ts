@@ -6,6 +6,7 @@ export const windowOperator = () => {
   const clicks = fromEvent(document, 'click');
   const sec = interval(1000);
 
+  // 每秒点击了多少次
   // const result = clicks.pipe(
   //   window(sec),
   //   map(win => {
@@ -23,5 +24,6 @@ export const windowOperator = () => {
     }),
     mergeAll(), // flatten the Observable-of-Observables
   );
+
   result.subscribe(x => console.log(x));
 }

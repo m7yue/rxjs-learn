@@ -2,6 +2,7 @@ import { fromEvent } from 'rxjs';
 import { pairwise, map } from 'rxjs/operators';
 
 // Puts the current value and previous value together as an array, and emits that.
+// pre, cur
 export const pairwiseOperator = () => {
   const clicks = fromEvent(document, 'click');
   const pairs = clicks.pipe(pairwise());

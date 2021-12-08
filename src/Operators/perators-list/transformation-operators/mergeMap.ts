@@ -8,7 +8,7 @@ export const mergeMapOperator = () => {
     mergeMap(x => x !== 'a' 
       ? interval(1000).pipe(take(3), map(i => x+i))
       : EMPTY
-    ),
+    , 1), // concurrent=Infinit 默认并发数为 无穷大
   );
   result.subscribe(x => console.log(x));
 }
