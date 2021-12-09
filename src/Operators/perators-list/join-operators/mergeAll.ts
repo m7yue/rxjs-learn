@@ -12,6 +12,6 @@ export const mergeAllOperator = () => {
   const higherOrder = clicks.pipe(
     map((ev) => interval(1000).pipe(take(10))),
   );
-  const firstOrder = higherOrder.pipe(mergeAll(2));
+  const firstOrder = higherOrder.pipe(mergeAll(2)); // concurrent: 并发
   firstOrder.subscribe(x => console.log(x));
 }

@@ -1,9 +1,17 @@
-import { fromEvent } from 'rxjs';
+import { fromEvent, merge } from 'rxjs';
 import { timestamp } from 'rxjs/operators';
 
 
 export const timestampOperator = () => {
-  const clickWithTimestamp = fromEvent(document, 'click').pipe(
+  const mouseWheel = fromEvent(document, 'mousewheel')
+  const mouseMove = fromEvent(document, 'mousemove')
+  const click = fromEvent(document, 'click')
+
+  const clickWithTimestamp = merge(
+    mouseWheel,
+    mouseMove,
+    click
+  ).pipe(
     timestamp()
   );
   

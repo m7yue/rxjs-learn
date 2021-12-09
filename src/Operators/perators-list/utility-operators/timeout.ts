@@ -65,14 +65,14 @@ export const timeoutOperator = () => {
   // .subscribe(console.log);
 
 
-  const getRandomTime = () => Math.round(7001);
+  // const getRandomTime = () => Math.round(7001);
 
-  const source$ = timer(getRandomTime()).pipe(
-    expand(() => timer(getRandomTime()))
-  )
+  // const source$ = timer(getRandomTime()).pipe(
+  //   expand(() => timer(getRandomTime()))
+  // )
 
-  source$.pipe(
-    timeout({ first: 7000, each: 5000 })
-  )
-  .subscribe(console.log);
+  // source$.pipe(
+  //   timeout({ first: 7000, each: 5000 })
+  // )
+  // .subscribe(console.log);
 }

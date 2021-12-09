@@ -152,7 +152,7 @@ function App() {
   // countOperator()
   // maxOperator()
   // minOperator()
-  // reduceOperator()
+  reduceOperator()
 
   // defaultIfEmptyOperator()
   // everyOperator()
@@ -210,7 +210,7 @@ function App() {
   // skipWhileOperator()
   // takeOperator()
   // takeLastOperator()
-  takeUtilOperator()
+  // takeUtilOperator()
   // takeWhileOperator()
   // throttleOperator()
   // throttleTimeOperator()
