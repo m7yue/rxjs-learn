@@ -199,8 +199,8 @@ function App() {
   // elementAtOperator()
   // filterOperator()
   // firstOperator()
-  // ignoreElementsOperator()
   // lastOperator()
+  // ignoreElementsOperator()
   // sampleOperator()
   // sampleTimeOperator()
   // singleOperator()
@@ -210,7 +210,7 @@ function App() {
   // skipWhileOperator()
   // takeOperator()
   // takeLastOperator()
-  // takeUtilOperator()
+  takeUtilOperator()
   // takeWhileOperator()
   // throttleOperator()
   // throttleTimeOperator()
@@ -239,7 +239,7 @@ function App() {
   // windowCountOperator()
   // windowTimeOperator()
   // windowToggleOperator()
-  windowWhenOperator()
+  // windowWhenOperator()
 
 
   // combineLatestOperator()

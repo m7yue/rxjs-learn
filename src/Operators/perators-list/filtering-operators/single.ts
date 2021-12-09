@@ -2,17 +2,17 @@ import { of } from 'rxjs';
 import { single } from 'rxjs/operators';
 
 export const singleOperator = () => {
-  const source1 = of(
-    { name: 'Ben' },
-    { name: 'Tracy' },
-    { name: 'Laney' },
-    { name: 'Lily' }
-  );
+  // const source1 = of(
+  //   { name: 'Ben' },
+  //   { name: 'Tracy' },
+  //   { name: 'Laney' },
+  //   { name: 'Lily' }
+  // );
   
-  source1.pipe(
-    single(x => x.name.startsWith('B'))
-  )
-  .subscribe(x => console.log(x));
+  // source1.pipe(
+  //   single(x => x.name.startsWith('B'))
+  // )
+  // .subscribe(x => console.log(x));
   
   
   // Error emitted: SequenceError('Too many values match')

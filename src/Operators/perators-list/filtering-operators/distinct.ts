@@ -18,7 +18,8 @@ export const distinctOperator = () => {
   of(
       { age: 4, name: 'Foo'},
       { age: 7, name: 'Bar'},
-      { age: 5, name: 'Foo'}
+      { age: 5, name: 'Foo'},
+      { age: 5, name: 'Bar'}
     ).pipe(
       distinct((p: Person) => p.name)
     )

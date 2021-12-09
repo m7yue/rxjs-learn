@@ -12,7 +12,7 @@ export const skipWhileOperator = () => {
 
   // Using Index: Skip value from the array until index 5
   const source = from([1, 2, 3, 4, 5, 6, 7, 9, 10]);
-  const example = source.pipe(skipWhile((_, i) => i !== 5));
+  const example = source.pipe(skipWhile((_, i) => i !== 5)); // i !== 5 全部跳过
   // output: 6, 7, 9, 10
   example.subscribe((val) => console.log(val));
 }
