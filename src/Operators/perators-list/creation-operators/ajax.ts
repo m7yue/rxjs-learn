@@ -16,17 +16,17 @@ export const ajaxOperator = () => {
       })
     );
 
-    obsAjax.subscribe()
+  obsAjax.subscribe()
     
   const obsAjaxGet = 
     ajax.getJSON(`https://api.github.com/users?per_page=5`)
     .pipe(
-    map(userResponse => console.log('users: ', userResponse)),
-    catchError(error => {
-      console.log('error: ', error);
-      return of(error);
-    })
-  );
+      map(userResponse => console.log('users: ', userResponse)),
+      catchError(error => {
+        console.log('error: ', error);
+        return of(error);
+      })
+    );
 
   obsAjaxGet.subscribe()
 

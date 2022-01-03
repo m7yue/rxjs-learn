@@ -17,6 +17,7 @@ export const maxOperator = () => {
     {age: 5, name: 'Bar'},
     {age: 9, name: 'Beer'},
   ).pipe(
+    // (x, y) => (comparer(x, y) > 0 ? x : y)
     max<Person>((a: Person, b: Person) => a.age < b.age ? -1 : 1),
   )
   .subscribe((x: Person) => console.log(x.name));

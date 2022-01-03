@@ -1,7 +1,7 @@
 import { range  } from 'rxjs';
 
 export const rangeOperator = () => {
-  const numbers = range(1, 3); // start, count
+  const numbers = range(7, 3); // start, count
  
   numbers.subscribe({
    next: value => { console.log(value) },

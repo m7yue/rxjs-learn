@@ -21,5 +21,5 @@ export const fromEventPatternOperator = () => {
 
   setTimeout(() => {
     sub.unsubscribe()
-  }, 100);
+  }, 3000);
 }

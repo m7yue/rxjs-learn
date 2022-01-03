@@ -21,13 +21,15 @@ export const tapOperator = () => {
 
 
   of(1, 2, 3).pipe(
-    concatMap(n => interval(1000).pipe(
-      take(Math.round(Math.random() * 10)),
-      map(() => 'X'),
-      tap({
-        complete: () => console.log(`Done with ${n}`)
-      })
-    ))
+    concatMap(n => {
+      return interval(1000).pipe(
+        take(Math.round(Math.random() * 10)),
+        map(() => 'X'),
+        tap({
+          complete: () => console.log(`Done with ${n}`)
+        })
+      )
+    })
    )
    .subscribe(console.log);
 }

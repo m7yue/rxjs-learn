@@ -2,7 +2,7 @@ import { interval, animationFrameScheduler } from 'rxjs';
 import { observeOn } from 'rxjs/operators';
 
 
-export const animationFrameSchedulerOperator = () => {
+export const animationFrameSchedulerDemo = () => {
   const someDiv: HTMLDivElement = document.querySelector("DIV")!;
   someDiv.style.background = 'yellow'
   console.log(someDiv)

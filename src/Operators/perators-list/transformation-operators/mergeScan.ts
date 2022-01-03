@@ -18,7 +18,7 @@ export const mergeScanOperator = () => {
         return of(acc + one).pipe(
           delay(1000)
         )
-      }, seed, 2),
+      }, seed, 3), // 1 秒内并发数
   );
   count$.subscribe(x => console.log(x));
 }

@@ -7,37 +7,37 @@ export const bufferCountOperator = () => {
   buffered.subscribe(x => console.log(x));
   
   // 内部实现原理
-  let buffers: string[][] = [];
-  let count = 0;
-  data.subscribe({
-    next: val => {
-      let toEmit: string[][] | null = null;
+  // let buffers: string[][] = [];
+  // let count = 0;
+  // data.subscribe({
+  //   next: val => {
+  //     let toEmit: string[][] | null = null;
 
-      if (count++ % 2 === 0) {
-        buffers.push([]);
-      }
-      for (const buffer of buffers) {
-        buffer.push(val);
+  //     if (count++ % 2 === 0) {
+  //       buffers.push([]);
+  //     }
+  //     for (const buffer of buffers) {
+  //       buffer.push(val);
 
-        if (3 <= buffer.length) {
-          toEmit = toEmit ?? [];
-          toEmit.push(buffer);
-        }
-      }
-      if (toEmit) {
-        for (const buffer of toEmit) {
-          arrRemove(buffers, buffer);
-          console.log(buffer)
-          // subscriber.next(buffer);
-        }
-      }
-    }, 
-    complete: () => {
-      for (const buffer of buffers) {
-        console.log(buffer)
-      }
-    }
-  })
+  //       if (3 <= buffer.length) {
+  //         toEmit = toEmit ?? [];
+  //         toEmit.push(buffer);
+  //       }
+  //     }
+  //     if (toEmit) {
+  //       for (const buffer of toEmit) {
+  //         arrRemove(buffers, buffer);
+  //         console.log(buffer)
+  //         // subscriber.next(buffer);
+  //       }
+  //     }
+  //   }, 
+  //   complete: () => {
+  //     for (const buffer of buffers) {
+  //       console.log(buffer)
+  //     }
+  //   }
+  // })
 }
 
 function arrRemove<T>(arr: T[] | undefined | null, item: T) {

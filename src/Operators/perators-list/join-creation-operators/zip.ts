@@ -1,4 +1,4 @@
-import { zip, of, interval } from 'rxjs';
+import { zip, of, interval, fromEvent } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 export const zipOperator = () => {
@@ -14,7 +14,8 @@ export const zipOperator = () => {
 
   let ob1 = interval(1000);
   let ob2 = interval(2000);
-  let ob3 = interval(3000);
+  // 这种其实会形成性能问题
+  let ob3 = fromEvent(document, 'click');
    
   zip(ob1, ob2, ob3).pipe(
     map(([v1, v2, v3]) => ({ v1, v2, v3 }))

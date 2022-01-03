@@ -23,6 +23,8 @@ export const retryWhenOperator = () => {
     )
   );
   
-  const subscribe = example.subscribe(val => console.log(val));  
+  const subscribe = example.subscribe(val => console.log(val)); 
 }
+
+// 请求失败， 记录日志并重试
 

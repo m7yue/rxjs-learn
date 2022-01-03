@@ -8,10 +8,12 @@ export const dematerializeOperator = () => {
   
   const materialized = of(notifyA, notifyB, notifyE);
   
-  // 将可 ObservableNotification 转换为实际的 Observable
-  const upperCase = materialized.pipe(dematerialize<any>());
+  // 将 ObservableNotification 转换为实际的 Observable
+  const upperCase = materialized.pipe(
+    dematerialize<any>()
+  );
   upperCase.subscribe({
      next: x => console.log(x),
-     error: e => console.error(e)
+     error: e => console.log(e)
   });
 }

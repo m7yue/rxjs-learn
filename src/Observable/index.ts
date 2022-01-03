@@ -1,7 +1,6 @@
-import { Observable } from 'rxjs';
+import { Observable } from '../rxjs/src/internal/Observable';
 
-
-export const test1 = () => {
+export const ObservableDemo = () => {
   const observable = new Observable(subscriber => {
     try {
       subscriber.next(1);
@@ -17,14 +16,11 @@ export const test1 = () => {
       subscriber.error(err); // delivers an error if it caught one
     }
 
+    // _teardowns.push ==>  unsubscribe ==> execTeardown
     return function unsubscribe() {
-     console.log('unsubscribe_aaa')
+      console.log('unsubscribe_aaa')
     };
   });
-
-
-  // forEach
-  observable.forEach(value => console.log('forEach value:' + value))
   
   console.log('just before subscribe');
   const subscription = observable.subscribe({
@@ -56,6 +52,13 @@ export const test1 = () => {
  */
 
 
+/**
+  destination = {
+    next,
+    error,
+    complete
+  }
+ */
 
   // Observable.subscribe(fn | Observer) ===> subscriber: {next, complete, error, unsubscribe}, destination ===>  this._subscribe(subscriber)
   // Subscriber.next(value) ===> this._next(value) ===>  this.destination.next(value) ===> Observable.subscribe(Observer): next, err, complete call...

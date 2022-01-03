@@ -24,7 +24,7 @@ export const catchErrorOperator = () => {
   //   }),
   //   // Retries the caught source Observable again in case of error, similar to retry() operator
   //   catchError((err, caught) => caught),
-  //   take(30),
+  //   take(10),
   // )
   // .subscribe(x => console.log(x));
 

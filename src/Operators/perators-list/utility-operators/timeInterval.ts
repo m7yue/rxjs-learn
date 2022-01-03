@@ -14,11 +14,14 @@ export const timeIntervalOperator = () => {
   //   }  
   // );
   
-  // seconds.pipe(timeout(100))
-  // .subscribe(
-  //   {
-  //     next: value => console.log(value),
-  //     error: err => console.log(err),
-  //   }
-  // );
+  seconds.pipe(
+    // timeout(100),
+    timeout(1100),
+  )
+  .subscribe(
+    {
+      next: value => console.log(value),
+      error: err => console.log(err),
+    }
+  );
 }

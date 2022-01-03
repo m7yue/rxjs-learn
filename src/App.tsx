@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { ObservableDemo } from './Observable'
+
 import { customDelayOperator } from './Operators/creating-custom-operators/creating-newoperators-from-scratch'
 
 import {ajaxOperator} from './Operators/perators-list/creation-operators/ajax'
@@ -130,90 +132,55 @@ import {asyncSubjectDemo} from './Subject/asyncSubject'
 import {asyncSchedulerDemo} from './Scheduler/asyncScheduler'
 import {queueSchedulerDemo} from './Scheduler/queueScheduler'
 import {asapSchedulerDemo} from './Scheduler/asapScheduler'
+import {animationFrameSchedulerDemo} from './Scheduler/animationFrameScheduler'
 
 
 
 import { test } from './Operators/creating-newoperators-from-scratch'
 
 function App() {
-  // asapSchedulerDemo()
-  // queueSchedulerDemo()
-  // asyncSchedulerDemo()
+  // ObservableDemo()
+
+  // subscriptionDemo()
 
   // subjectDemo()
   // behaviorSubjectDemo()
   // replaySubjectDemo()
   // asyncSubjectDemo()
 
-  // subscriptionDemo()
+
+  // asapSchedulerDemo()
+  // queueSchedulerDemo()
+  // asyncSchedulerDemo()
+  // animationFrameSchedulerDemo()
+
 
   // customDelayOperator()
 
-  // countOperator()
-  // maxOperator()
-  // minOperator()
-  // reduceOperator()
 
-  // defaultIfEmptyOperator()
-  // everyOperator()
-  // findOperator()
-  // findIndexOperator()
-  // isEmptyOperator()
-
-  // tapOperator()
-  // delayOperator()
-  // delayWhenOperator()
-  // dematerializeOperator()
-  // materializeOperator()
-  // observeOnOperator()
-  // subscribeOnOperator()
-  // timeIntervalOperator()
-  // timestampOperator()
-  // timeoutOperator()
-  // toArrayOperator()
+  // ajaxOperator()
+  // bindCallbackOperator()
+  // bindNodeCallbackOperator()
+  // deferOperator()
+  // emptyDemo()
+  // fromOperator()
+  // fromEventOperator()
+  // fromEventPatternOperator()
+  // intervalOperator()
+  // ofOperator()
+  // rangeOperator()
+  // throwErrorOperator()
+  // timerOperator()
+  // iifOperator()
 
 
-  // catchErrorOperator()
-  // retryOperator()
-  // retryWhenOperator()
-  
-
-  // shareOperator()
-
-
-  // combineLatestAllOperator()
-  // concatAllOperator()
-  // exhaustAllOperator()
-  // mergeAllOperator()
-  // switchAllOperator()
-  // startWithOperator()
-  // withLatestFromOperator()
-
-  // auditOperator()
-  // auditTimeOperator()
-  // debounceOperator()
-  // debounceTimeOperator()
-  // distinctOperator()
-  // distinctUntilChangedOperator()
-  // distinctUntilKeyChangedOperator()
-  // elementAtOperator()
-  // filterOperator()
-  // firstOperator()
-  // lastOperator()
-  // ignoreElementsOperator()
-  // sampleOperator()
-  // sampleTimeOperator()
-  // singleOperator()
-  // skipOperator()
-  // skipLastOperator()
-  // skipUntilOperator()
-  // skipWhileOperator()
-  // takeOperator()
-  // takeLastOperator()
-  takeUtilOperator()
-  // takeWhileOperator()
-  // throttleOperator()
-  // throttleTimeOperator()
+  // combineLatestOperator()
+  // concatOperator()
+  // forkJoinOperator()
+  // mergeOperator()
+  // partitionOperator()
+  // raceOperator()
+  // zipOperator()
 
 
   // bufferOperator()
@@ -242,30 +209,76 @@ function App() {
   // windowWhenOperator()
 
 
-  // combineLatestOperator()
-  // concatOperator()
-  // forkJoinOperator()
-  // mergeOperator()
-  // partitionOperator()
-  // raceOperator()
-  // zipOperator()
+  // auditOperator()
+  // auditTimeOperator()
+  // debounceOperator()
+  // debounceTimeOperator()
+  // distinctOperator()
+  // distinctUntilChangedOperator()
+  // distinctUntilKeyChangedOperator()
+  // elementAtOperator()
+  // filterOperator()
+  // firstOperator()
+  // lastOperator()
+  // ignoreElementsOperator()
+  // sampleOperator()
+  // sampleTimeOperator()
+  // singleOperator()
+  // skipOperator()
+  // skipLastOperator()
+  // skipUntilOperator()
+  // skipWhileOperator()
+  // takeOperator()
+  // takeLastOperator()
+  // takeUtilOperator()
+  // takeWhileOperator()
+  // throttleOperator()
+  // throttleTimeOperator()
 
 
-  // ajaxOperator()
-  // bindCallbackOperator()
-  // bindNodeCallbackOperator()
-  // deferOperator()
-  // emptyDemo()
-  // fromOperator()
-  // fromEventOperator()
-  // fromEventPatternOperator()
-  // intervalOperator()
-  // ofOperator()
-  // rangeOperator()
-  // throwErrorOperator()
-  // timerOperator()
-  // iifOperator()
+  // combineLatestAllOperator()
+  // concatAllOperator()
+  // exhaustAllOperator()
+  // mergeAllOperator()
+  // switchAllOperator()
+  // startWithOperator()
+  // withLatestFromOperator()
 
+
+  // shareOperator()
+
+
+  // catchErrorOperator()
+  // retryOperator()
+  // retryWhenOperator()
+
+
+  // tapOperator()
+  // delayOperator()
+  // delayWhenOperator()
+  // dematerializeOperator()
+  // materializeOperator()
+  // observeOnOperator()
+  // subscribeOnOperator()
+  // timeIntervalOperator()
+  // timestampOperator()
+  // timeoutOperator()
+  // toArrayOperator()
+
+
+  // defaultIfEmptyOperator()
+  // everyOperator()
+  // findOperator()
+  // findIndexOperator()
+  // isEmptyOperator()
+
+
+  // countOperator()
+  // maxOperator()
+  minOperator()
+  // reduceOperator()
+
+  
   return (
     <div className="App">
       react

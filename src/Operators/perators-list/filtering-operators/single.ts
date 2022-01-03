@@ -26,19 +26,25 @@ export const singleOperator = () => {
   // source2.pipe(
   //   single(x => x.name.startsWith('B'))
   // )
-  // .subscribe(x => console.log(x));
+  // .subscribe({
+  //   next: x => console.log(x),
+  //   error: x => console.log(x),
+  // });
   
   
   // Error emitted: NotFoundError('No values match')
-  // const source3 = of(
-  //   { name: 'Laney' },
-  //   { name: 'Tracy' },
-  //   { name: 'Lily' },
-  //   { name: 'Lincoln' }
-  // );
+  const source3 = of(
+    { name: 'Laney' },
+    { name: 'Tracy' },
+    { name: 'Lily' },
+    { name: 'Lincoln' }
+  );
   
-  // source3.pipe(
-  //   single(x => x.name.startsWith('B'))
-  // )
-  // .subscribe(x => console.log(x));
+  source3.pipe(
+    single(x => x.name.startsWith('B'))
+  )
+  .subscribe({
+    next: x => console.log(x),
+    error: x => console.log(x),
+  });
 }

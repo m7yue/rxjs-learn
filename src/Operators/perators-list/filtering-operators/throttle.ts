@@ -1,9 +1,13 @@
-import { fromEvent, interval } from 'rxjs';
+import { fromEvent, interval, timer } from 'rxjs';
 import { throttle } from 'rxjs/operators';
 
 export const throttleOperator = () => {
   const clicks = fromEvent(document, 'click');
-  const result = clicks.pipe(throttle(ev => interval(1000)));
+  const result = clicks.pipe(
+    throttle(
+      // ev => interval(1000))
+      ev => timer(1000))
+    );
   result.subscribe(x => console.log(x));
 }
 

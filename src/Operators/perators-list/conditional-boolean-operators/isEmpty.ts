@@ -1,6 +1,8 @@
 import { Subject } from 'rxjs';
 import { isEmpty } from 'rxjs/operators';
 
+// 如果输入 observable 发出任何值，则发出 false
+// 如果输入的 observable 完成而没有发出任何值，则发出 true
 export const isEmptyOperator = () => {
   const source = new Subject<string>();
   const result = source.pipe(isEmpty());

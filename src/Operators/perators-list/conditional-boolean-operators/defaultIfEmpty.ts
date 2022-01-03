@@ -1,12 +1,14 @@
-import { fromEvent, interval } from 'rxjs';
-import { defaultIfEmpty, takeUntil } from 'rxjs/operators';
+import { EMPTY, fromEvent, interval } from 'rxjs';
+import { defaultIfEmpty, takeUntil, scan, map } from 'rxjs/operators';
 
 
 export const defaultIfEmptyOperator = () => {
   const clicks = fromEvent(document, 'click');
-  const clicksBeforeFive = clicks.pipe(takeUntil(interval(3000)));
+  const clicksBeforeFive = clicks.pipe(    
+    takeUntil(interval(5000))
+  );
   
-  // If no clicks happen in 3 seconds, then emit "no clicks"
+  // If no clicks happen in 5 seconds, then emit "no clicks"
   const result = clicksBeforeFive.pipe(defaultIfEmpty('no clicks'));
   result.subscribe(x => console.log(x));
 }

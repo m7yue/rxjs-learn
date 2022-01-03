@@ -44,7 +44,7 @@ export const timeoutOperator = () => {
 
   // ============== Handling TimeoutErrors ===============
 
-  // Emit a TimeoutError if the first value, does not arrive within 5 seconds
+  // Emit a TimeoutError if the first value, does not arrive within 3 seconds
   // const source$ = interval(4000);
 
   // source$.pipe(
@@ -65,14 +65,14 @@ export const timeoutOperator = () => {
   // .subscribe(console.log);
 
 
-  const getRandomTime = () => Math.round(7001);
+  const getRandomTime = () => Math.round(4001);
 
   const source$ = timer(getRandomTime()).pipe(
     expand(() => timer(getRandomTime()))
   )
 
   source$.pipe(
-    timeout({ first: 7000, each: 5000 })
+    timeout({ first: 4000, each: 3000 })
   )
   .subscribe(console.log);
 }
