@@ -12,7 +12,7 @@ export const retryWhenOperator = () => {
       return val;
     }),
     retryWhen((errors: any) => {
-      console.log(errors)
+      // console.log(errors)
       return errors.pipe(
         // log error message
         tap(val => console.log(`Value ${val} was too high!`)),
